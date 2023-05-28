@@ -1,0 +1,10 @@
+services:
+  - name: weather-app
+    env:
+      - key: NODE_ENV
+        value: production
+    buildCommand: npm run build
+    startCommand: npm run start
+    routes:
+      - src: /
+        dest: /index.html
